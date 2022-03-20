@@ -161,8 +161,8 @@ Puede cambiar el idioma utilizado con las pestañas en la parte superior derecha
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"reiciendis\",
-    \"password\": \"tenetur\"
+    \"email\": \"accusantium\",
+    \"password\": \"enim\"
 }"
 </code></pre></div>
 
@@ -178,8 +178,8 @@ const headers = {
 };
 
 let body = {
-    "email": "reiciendis",
-    "password": "tenetur"
+    "email": "accusantium",
+    "password": "enim"
 };
 
 fetch(url, {
@@ -195,8 +195,8 @@ import json
 
 url = 'http://127.0.0.1:8000/api/auth/login'
 payload = {
-    "email": "reiciendis",
-    "password": "tenetur"
+    "email": "accusantium",
+    "password": "enim"
 }
 headers = {
   'Content-Type': 'application/json',
@@ -217,8 +217,8 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'email' =&gt; 'reiciendis',
-            'password' =&gt; 'tenetur',
+            'email' =&gt; 'accusantium',
+            'password' =&gt; 'enim',
         ],
     ]
 );
@@ -313,7 +313,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-auth-login"
-               value="reiciendis"
+               value="accusantium"
                data-component="body" hidden>
     <br>
 <p>Un correo electrónico válido y que exista en la base de datos</p>
@@ -323,7 +323,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-auth-login"
-               value="tenetur"
+               value="enim"
                data-component="body" hidden>
     <br>
 <p>Una contraseña vinculada a ese correo</p>
@@ -504,7 +504,7 @@ print_r(json_decode((string) $body));</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://127.0.0.1:8000/api/products?page=7" \
+    --get "http://127.0.0.1:8000/api/products?page=3" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -516,7 +516,7 @@ print_r(json_decode((string) $body));</code></pre></div>
 );
 
 const params = {
-    "page": "7",
+    "page": "3",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -539,7 +539,7 @@ import json
 
 url = 'http://127.0.0.1:8000/api/products'
 params = {
-  'page': '7',
+  'page': '3',
 }
 headers = {
   'Authorization': 'Bearer {YOUR_AUTH_KEY}',
@@ -562,7 +562,7 @@ $response = $client-&gt;get(
             'Accept' =&gt; 'application/json',
         ],
         'query' =&gt; [
-            'page'=&gt; '7',
+            'page'=&gt; '3',
         ],
     ]
 );
@@ -666,7 +666,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="number"
                name="page"
                data-endpoint="GETapi-products"
-               value="7"
+               value="3"
                data-component="query" hidden>
     <br>
 
@@ -691,11 +691,11 @@ print_r(json_decode((string) $body));</code></pre></div>
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "name=incidunt" \
-    --form "description=inventore" \
+    --form "name=sint" \
+    --form "description=nam" \
     --form "available=" \
-    --form "price=0.5368424" \
-    --form "image=@/tmp/phpXrCi5l" </code></pre></div>
+    --form "price=55.4" \
+    --form "image=@/tmp/phpHuatvx" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -710,10 +710,10 @@ const headers = {
 };
 
 const body = new FormData();
-body.append('name', 'incidunt');
-body.append('description', 'inventore');
+body.append('name', 'sint');
+body.append('description', 'nam');
 body.append('available', '');
-body.append('price', '0.5368424');
+body.append('price', '55.4');
 body.append('image', document.querySelector('input[name="image"]').files[0]);
 
 fetch(url, {
@@ -729,13 +729,13 @@ import json
 
 url = 'http://127.0.0.1:8000/api/products'
 files = {
-  'image': open('/tmp/phpXrCi5l', 'rb')
+  'image': open('/tmp/phpHuatvx', 'rb')
 }
 payload = {
-    "name": "incidunt",
-    "description": "inventore",
+    "name": "sint",
+    "description": "nam",
     "available": false,
-    "price": 0.5368424
+    "price": 55.4
 }
 headers = {
   'Authorization': 'Bearer {YOUR_AUTH_KEY}',
@@ -760,11 +760,11 @@ $response = $client-&gt;post(
         'multipart' =&gt; [
             [
                 'name' =&gt; 'name',
-                'contents' =&gt; 'incidunt'
+                'contents' =&gt; 'sint'
             ],
             [
                 'name' =&gt; 'description',
-                'contents' =&gt; 'inventore'
+                'contents' =&gt; 'nam'
             ],
             [
                 'name' =&gt; 'available',
@@ -772,11 +772,11 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'price',
-                'contents' =&gt; '0.5368424'
+                'contents' =&gt; '55.4'
             ],
             [
                 'name' =&gt; 'image',
-                'contents' =&gt; fopen('/tmp/phpXrCi5l', 'r')
+                'contents' =&gt; fopen('/tmp/phpHuatvx', 'r')
             ],
         ],
     ]
@@ -858,7 +858,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="text"
                name="name"
                data-endpoint="POSTapi-products"
-               value="incidunt"
+               value="sint"
                data-component="body" hidden>
     <br>
 <p>Nombre del producto</p>
@@ -878,7 +878,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="text"
                name="description"
                data-endpoint="POSTapi-products"
-               value="inventore"
+               value="nam"
                data-component="body" hidden>
     <br>
 <p>Descripción del producto</p>
@@ -909,7 +909,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="number"
                name="price"
                data-endpoint="POSTapi-products"
-               value="0.5368424"
+               value="55.4"
                data-component="body" hidden>
     <br>
 <p>Precio del producto</p>
@@ -930,7 +930,7 @@ print_r(json_decode((string) $body));</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://127.0.0.1:8000/api/products/13" \
+    --get "http://127.0.0.1:8000/api/products/16" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -938,7 +938,7 @@ print_r(json_decode((string) $body));</code></pre></div>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/products/13"
+    "http://127.0.0.1:8000/api/products/16"
 );
 
 const headers = {
@@ -957,7 +957,7 @@ fetch(url, {
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://127.0.0.1:8000/api/products/13'
+url = 'http://127.0.0.1:8000/api/products/16'
 headers = {
   'Authorization': 'Bearer {YOUR_AUTH_KEY}',
   'Content-Type': 'application/json',
@@ -971,7 +971,7 @@ response.json()</code></pre></div>
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://127.0.0.1:8000/api/products/13',
+    'http://127.0.0.1:8000/api/products/16',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -1057,7 +1057,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="number"
                name="id"
                data-endpoint="GETapi-products--id-"
-               value="13"
+               value="16"
                data-component="url" hidden>
     <br>
 <p>ID del producto</p>
@@ -1082,11 +1082,11 @@ print_r(json_decode((string) $body));</code></pre></div>
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "name=perspiciatis" \
-    --form "description=non" \
+    --form "name=culpa" \
+    --form "description=eum" \
     --form "available=" \
-    --form "price=82337478.4" \
-    --form "image=@/tmp/phpZ2WYLo" </code></pre></div>
+    --form "price=393421.0664208" \
+    --form "image=@/tmp/phphuGS5v" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -1101,10 +1101,10 @@ const headers = {
 };
 
 const body = new FormData();
-body.append('name', 'perspiciatis');
-body.append('description', 'non');
+body.append('name', 'culpa');
+body.append('description', 'eum');
 body.append('available', '');
-body.append('price', '82337478.4');
+body.append('price', '393421.0664208');
 body.append('image', document.querySelector('input[name="image"]').files[0]);
 
 fetch(url, {
@@ -1120,13 +1120,13 @@ import json
 
 url = 'http://127.0.0.1:8000/api/products/1'
 files = {
-  'image': open('/tmp/phpZ2WYLo', 'rb')
+  'image': open('/tmp/phphuGS5v', 'rb')
 }
 payload = {
-    "name": "perspiciatis",
-    "description": "non",
+    "name": "culpa",
+    "description": "eum",
     "available": false,
-    "price": 82337478.4
+    "price": 393421.0664208
 }
 headers = {
   'Authorization': 'Bearer {YOUR_AUTH_KEY}',
@@ -1151,11 +1151,11 @@ $response = $client-&gt;put(
         'multipart' =&gt; [
             [
                 'name' =&gt; 'name',
-                'contents' =&gt; 'perspiciatis'
+                'contents' =&gt; 'culpa'
             ],
             [
                 'name' =&gt; 'description',
-                'contents' =&gt; 'non'
+                'contents' =&gt; 'eum'
             ],
             [
                 'name' =&gt; 'available',
@@ -1163,11 +1163,11 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'price',
-                'contents' =&gt; '82337478.4'
+                'contents' =&gt; '393421.0664208'
             ],
             [
                 'name' =&gt; 'image',
-                'contents' =&gt; fopen('/tmp/phpZ2WYLo', 'r')
+                'contents' =&gt; fopen('/tmp/phphuGS5v', 'r')
             ],
         ],
     ]
@@ -1247,7 +1247,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="text"
                name="name"
                data-endpoint="PUTapi-products--id-"
-               value="perspiciatis"
+               value="culpa"
                data-component="body" hidden>
     <br>
 <p>Nombre del producto</p>
@@ -1267,7 +1267,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="text"
                name="description"
                data-endpoint="PUTapi-products--id-"
-               value="non"
+               value="eum"
                data-component="body" hidden>
     <br>
 <p>Descripción del producto</p>
@@ -1298,7 +1298,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="number"
                name="price"
                data-endpoint="PUTapi-products--id-"
-               value="82337478.4"
+               value="393421.0664208"
                data-component="body" hidden>
     <br>
 <p>Precio del producto</p>

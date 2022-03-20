@@ -66,10 +66,13 @@ class AuthController extends Controller
         $credencials = request(['email', 'password']);
 
         if ( !$token = JWTAuth::attempt( $credencials ) ) {
-            $this->response->error(
+            $this->response->errorUnauthorized(
+                'Credenciales Incorrectas',
+            );
+            /*$this->response->error(
                 'Credenciales Incorrectas',
                 Response::HTTP_UNAUTHORIZED,
-            );
+            );*/
         }
 
         return $this->respondWithToken( $token );

@@ -22,7 +22,7 @@ endpoints:
         name: page
         description: ''
         required: false
-        example: 7
+        example: 3
         type: integer
         custom: []
     bodyParameters: []
@@ -87,7 +87,7 @@ endpoints:
         name: name
         description: 'Nombre del producto'
         required: false
-        example: incidunt
+        example: sint
         type: string
         custom: []
       image:
@@ -101,7 +101,7 @@ endpoints:
         name: description
         description: 'Descripción del producto'
         required: false
-        example: inventore
+        example: nam
         type: string
         custom: []
       available:
@@ -115,7 +115,7 @@ endpoints:
         name: price
         description: 'Precio del producto'
         required: false
-        example: 0.5368424
+        example: 55.4
         type: number
         custom: []
     responses:
@@ -154,7 +154,7 @@ endpoints:
         name: id
         description: 'ID del producto'
         required: false
-        example: 13
+        example: 16
         type: integer
         custom: []
     queryParameters: []
@@ -205,7 +205,7 @@ endpoints:
         name: name
         description: 'Nombre del producto'
         required: false
-        example: perspiciatis
+        example: culpa
         type: string
         custom: []
       image:
@@ -219,7 +219,7 @@ endpoints:
         name: description
         description: 'Descripción del producto'
         required: false
-        example: non
+        example: eum
         type: string
         custom: []
       available:
@@ -233,7 +233,7 @@ endpoints:
         name: price
         description: 'Precio del producto'
         required: false
-        example: 82337478.4
+        example: 393421.0664208
         type: number
         custom: []
     responses: []

@@ -20,14 +20,14 @@ endpoints:
         name: email
         description: 'Un correo electrónico válido y que exista en la base de datos'
         required: true
-        example: reiciendis
+        example: accusantium
         type: string
         custom: []
       password:
         name: password
         description: 'Una contraseña vinculada a ese correo'
         required: true
-        example: tenetur
+        example: enim
         type: string
         custom: []
     responses:
